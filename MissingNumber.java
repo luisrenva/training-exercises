@@ -1,5 +1,8 @@
 import java.util.Arrays;
 
+// Problem Statement
+// You are given an array of positive numbers from 1 to n, such that all numbers from 1 to n
+//  are present except one number, x. You have to find x. The input array is not sorted
 class MissingNumber {
     //TODO: add logic in case that is missing more than 1 number
     public static void main (String ... args) {
