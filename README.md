@@ -4,9 +4,9 @@ Will contain exercises that are frequently ask by FAANG
 
 Every Exercises will contain the desc of the problem in the in the top
 
-Pre-requirments:
+Pre-requirments:\
 1.- Java8,11,12, etc\
-2.- IDE: eclipse, IntelliJ, #(Highly recommended just to use notepad)\
+2.- IDE: eclipse, IntelliJ, #(Highly recommended just to use notepad)
 
 How to execute files:
 
