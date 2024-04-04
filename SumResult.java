@@ -15,6 +15,7 @@ class SumResult {
         for (int i=0; i < array.length; i++) {
             for (int j=0; j < array.length; j++) {
                 if (i == j) continue;
+
                 if (array[i] + array[j] == target) {
                     if (deleteDuplicates.toString().contains(String.valueOf(array[i])) || deleteDuplicates.toString().contains(String.valueOf(array[j]))) {
                         continue;
