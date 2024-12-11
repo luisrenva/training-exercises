@@ -15,7 +15,7 @@ class MissingNumber {
         for (int i=0; i<= arraySize; i++) {
             if (arraySize == i) return;
 
-            int currentPlusOne = array[i] + 1;
+            int currentPlusOne = array[i] + 1; 
             int nextValue = array[i+1];
 
             if (currentPlusOne != nextValue) {
