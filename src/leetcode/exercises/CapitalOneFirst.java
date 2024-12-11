@@ -1,4 +1,4 @@
-package exercises;
+package leetcode.exercises;
 
 //Given an String  "example of message" and with a limit, determine how many message I need to send by phone
 // in case the number of character in string overpass the limit, if we exceed the limit then we split the string and
