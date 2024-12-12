@@ -19,72 +19,66 @@ public class LongestConsecutive {
 //		System.out.println("Response:  "+response);
 //
 //	}
-	
+
 	public static int longestConsecutive(int[] nums) {
-		if(nums == null || nums.length == 0) {
+		if (nums == null || nums.length == 0) {
 			return 0;
 		}
 
-        int increment =0;
-        int index = 0;
+		int increment = 0;
+		int index = 0;
 
-        Set <Integer> orderArray = new TreeSet<>();
-        
-        for (int values: nums) {
-        	orderArray.add(values);
-        }
-        
-        int initValue = orderArray.iterator().next();
-        boolean initFound = false;
-        int initValueFor = initValue < 0 ? initValue : 0;
-        Integer [] arrayIncrements= new Integer [1000];
-        
+		Set<Integer> orderArray = new TreeSet<>();
+
+		for (int values : nums) {
+			orderArray.add(values);
+		}
+
+		int initValue = orderArray.iterator().next();
+		boolean initFound = false;
+		int initValueFor = initValue < 0 ? initValue : 0;
+		Integer[] arrayIncrements = new Integer[1000];
+
 //        [-1, 0, 1, 3, 4, 5, 6, 7, 8, 9]
 
-
 //        for (int i=0; i <nums.length; i++) {
-        for (int i=initValueFor; i <= nums.length; i++) {
-        	if (initFound == true) {
+		for (int i = initValueFor; i <= nums.length; i++) {
+			if (initFound == true) {
 //        		System.out.println(i);
-        		System.out.println(orderArray.contains(i) + "  i: " +i);
-        		if (orderArray.contains(i)) {
-        			increment ++;
-        		}
-        		
-        		if(!(orderArray.contains(i)) && orderArray.contains(i+1) ) { // if number 2 but next exist
-        			arrayIncrements[index] = increment;
-        			index ++;
-        			increment = 0;
-        		}
-        		
-        	}
+				System.out.println(orderArray.contains(i) + "  i: " + i);
+				if (orderArray.contains(i)) {
+					increment++;
+				}
 
-        	if (initValue == i) {
-        		increment ++;
-        		initFound = true;
-        	}
+				if (!(orderArray.contains(i)) && orderArray.contains(i + 1)) { // if number 2 but next exist
+					arrayIncrements[index] = increment;
+					index++;
+					increment = 0;
+				}
 
-        
-        }
-        
+			}
+
+			if (initValue == i) {
+				increment++;
+				initFound = true;
+			}
+
+		}
+
 //        System.out.println("Increment: "+increment);
 //        Integer [] finalResponseArray = new Integer[arrayIncrements.length];
 //        finalResponseArray = Arrays.copyOf(arrayIncrements, arrayIncrements.length);
-        int response = 0;
-        if (arrayIncrements.length >1) {
-        	Integer [] newArray = Arrays.stream(arrayIncrements).filter(num -> num != null).toArray(Integer[]::new);
-        	if (newArray.length > 0) {
-        		response = Collections.max(Arrays.asList(newArray));
-        	}
-        }
-        
+		int response = 0;
+		if (arrayIncrements.length > 1) {
+			Integer[] newArray = Arrays.stream(arrayIncrements).filter(num -> num != null).toArray(Integer[]::new);
+			if (newArray.length > 0) {
+				response = Collections.max(Arrays.asList(newArray));
+			}
+		}
 
 //        return Collections.max(Arrays.asList(arrayIncrements));
-        return response > 0 && increment < response ? response : increment;
-        
-    }
-	
-	
-	
+		return response > 0 && increment < response ? response : increment;
+
+	}
 
 }

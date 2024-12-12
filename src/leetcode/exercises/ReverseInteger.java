@@ -10,18 +10,18 @@ public class ReverseInteger {
 //		System.out.println("Reverse value:  "+result);
 //
 //	}
-	
+
 	static int reverseInteger(int value) {
-		String valueToReverse = String.valueOf(value); 
-		String [] charactersInInteger = valueToReverse.split("");
+		String valueToReverse = String.valueOf(value);
+		String[] charactersInInteger = valueToReverse.split("");
 		Stack<String> result = new Stack<>();
-		
-		for (String val: charactersInInteger) {
+
+		for (String val : charactersInInteger) {
 			result.push(val);
 		}
-		
+
 		StringBuilder concat = new StringBuilder();
-		while(!result.isEmpty()) {
+		while (!result.isEmpty()) {
 			concat.append(result.pop());
 		}
 
